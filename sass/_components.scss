@@ -1,0 +1,32 @@
+.background-img {
+  width: 100%;
+  border: none;
+  height: 100vh;
+}
+
+.navbar {
+  background-color: var(--color-primary-dark);
+  margin: 0;
+  padding: 0.7rem;
+}
+
+.nav-el {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+
+  &__item {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+  }
+}

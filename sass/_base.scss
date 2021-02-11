@@ -1,13 +1,18 @@
 :root {
-  --color-primary: #a98eb8;
+  --color-primary-light: #a98eb8;
+  --color-primary-dark: #673d7e;
 }
 
 * {
   font-family: Libre Franklin, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  font-size: 62.5%;
+  height: 100vh;
+  overflow-y: hidden;
 }
