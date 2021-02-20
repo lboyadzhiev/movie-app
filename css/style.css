@@ -1,6 +1,7 @@
 :root {
   --color-primary-light: #a98eb8;
-  --color-primary-dark: #673d7e; }
+  --color-primary-dark: #673d7e;
+  --color-white: #fff; }
 
 * {
   font-family: Libre Franklin, sans-serif;
@@ -23,8 +24,29 @@ footer {
   padding: 0.5rem;
   font-weight: bold;
   background-color: var(--color-primary-dark);
-  color: #fff;
+  color: var(--color-white);
   font-size: 1rem; }
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  text-align: center;
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 1.5rem; }
+
+.heading-primary {
+  font-size: 3rem;
+  color: var(--color-white);
+  text-decoration: underline;
+  font-weight: bold;
+  margin: 3rem; }
 
 .background-img {
   width: 100%;
@@ -54,3 +76,24 @@ footer {
     .nav-el__link:hover {
       color: #fff;
       text-decoration: underline; }
+
+.form-item {
+  outline: none;
+  padding: 0.8rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-white); }
+
+.submit {
+  border: 2px solid var(--color-primary-light);
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0 auto;
+  padding: 0.5rem 0.8rem; }
+  .submit:hover {
+    border: 2px solid var(--color-primary-dark);
+    background-color: var(--color-primary-light);
+    text-decoration: underline;
+    cursor: pointer; }

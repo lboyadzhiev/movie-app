@@ -31,8 +31,48 @@
 
       <!-- register form -->
 
-      <section id="registerForm">
+      <section class="form-section" id="registerForm">
+         <h1 class="heading-primary">Register</h1>
+         <form action="" method="POST" class="form">
 
+            <label>Username</label>
+            <input type="text" name="username" class="form-item" id="registerUsername">
+            <label>Password</label>
+            <input type="password" name="password" class="form-item" id="registerPassword">
+            <label>Repeat Password</label>
+            <input type="password" name="repeatPassword" class="form-item" id="registerRepeatPassword">
+            <input type="submit" class="submit" value="Register">
+         </form>
+      </section>
+
+      <section class="form-section" id="loginForm">
+         <h1 class="heading-primary">Login</h1>
+         <form action="" method="POST" class="form">
+
+            <label>Username</label>
+            <input type="text" name="username" class="form-item" id="loginUsername">
+            <label>Password</label>
+            <input type="password" name="password" class="form-item" id="loginPassword">
+            <label>Repeat Password</label>
+            <input type="submit" class="submit" value="Login">
+         </form>
+      </section>
+
+      <section class="form-section" id="addMovie">
+         <h1 class="heading-primary">Create Movie</h1>
+         <form action="" method="POST" class="form">
+            <label>Title</label>
+            <input type="text" name="title" class="form-item" id="createTitle">
+            <label>Image Url</label>
+            <input type="text" name="imageUrl" class="form-item" id="createImage">
+            <label>Description</label>
+            <textarea type="text" name="description" class="form-item" id="createDescription"></textarea>
+            <label>Genres</label>
+            <input type="text" class="form-item" name="genres" id="createGenres">
+            <label>Available Tickets</label>
+            <input type="number" class="form-item" name="tickets" id="createTickets">
+            <input type="submit" class="submit" value="Create">
+         </form>
       </section>
       <footer>@Movies</footer>
    </div>
