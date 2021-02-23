@@ -4,6 +4,18 @@
   text-decoration: underline;
   font-weight: bold;
   margin: 3rem;
+  text-align: center;
+}
+
+.heading-secondary {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
 }
 
 .background-img {
@@ -32,9 +44,7 @@
   }
 
   &__link {
-    text-decoration: none;
     font-size: 1rem;
-    color: #fff;
     font-weight: bold;
 
     &:hover {
@@ -52,7 +62,7 @@
   border: 1px solid var(--color-white);
 }
 
-.submit {
+.btn {
   border: 2px solid var(--color-primary-light);
   background-color: var(--color-primary-dark);
   color: var(--color-white);
@@ -66,5 +76,37 @@
     background-color: var(--color-primary-light);
     text-decoration: underline;
     cursor: pointer;
+  }
+}
+
+.movies {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &__movie {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 30%;
+  }
+
+  &__img {
+    margin: 1rem 0;
+  }
+
+  &__tickets {
+    color: var(--color-white);
+    font-size: 1.2rem;
+  }
+  &__btn-group {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  &__btn {
+    margin: 1rem auto 12% auto;
   }
 }

@@ -12,8 +12,7 @@
 body {
   background-color: var(--color-primary-light);
   font-size: 62.5%;
-  height: 100vh;
-  overflow-y: hidden; }
+  height: 100vh; }
 
 footer {
   position: fixed;
@@ -41,12 +40,27 @@ footer {
   font-weight: bold;
   font-size: 1.5rem; }
 
+.myMovies-section {
+  height: 100rem;
+  width: 80%;
+  margin: auto; }
+
 .heading-primary {
   font-size: 3rem;
   color: var(--color-white);
   text-decoration: underline;
   font-weight: bold;
-  margin: 3rem; }
+  margin: 3rem;
+  text-align: center; }
+
+.heading-secondary {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  text-decoration: underline; }
+
+a {
+  text-decoration: none;
+  color: var(--color-white); }
 
 .background-img {
   width: 100%;
@@ -69,9 +83,7 @@ footer {
     font-size: 1rem;
     color: #fff; }
   .nav-el__link {
-    text-decoration: none;
     font-size: 1rem;
-    color: #fff;
     font-weight: bold; }
     .nav-el__link:hover {
       color: #fff;
@@ -84,7 +96,7 @@ footer {
   border-radius: 1rem;
   border: 1px solid var(--color-white); }
 
-.submit {
+.btn {
   border: 2px solid var(--color-primary-light);
   background-color: var(--color-primary-dark);
   color: var(--color-white);
@@ -92,8 +104,30 @@ footer {
   font-size: 1rem;
   margin: 0 auto;
   padding: 0.5rem 0.8rem; }
-  .submit:hover {
+  .btn:hover {
     border: 2px solid var(--color-primary-dark);
     background-color: var(--color-primary-light);
     text-decoration: underline;
     cursor: pointer; }
+
+.movies {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 100%; }
+  .movies__movie {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 30%; }
+  .movies__img {
+    margin: 1rem 0; }
+  .movies__tickets {
+    color: var(--color-white);
+    font-size: 1.2rem; }
+  .movies__btn-group {
+    display: flex;
+    width: 60%;
+    margin: 0 auto; }
+  .movies__btn {
+    margin: 1rem auto 12% auto; }
