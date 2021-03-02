@@ -113,10 +113,50 @@
 
                <div class="movies__btn-group">
                   <button class="movies__btn btn"><a href="#">Buy Ticket</a></button>
-                  <button class="movies__btn btn"><a href="#">Edit</a></button>
+                  <button class="movies__btn btn"><a href="#">Details</a></button>
                </div>
             </div>
          </div>
+
+         <section class="form-section" id="editMovie">
+            <h1 class="heading-primary">Edit Movie</h1>
+            <form action="" method="POST" class="form">
+               <label>Title</label>
+               <input type="text" name="title" class="form-item" id="editTitle">
+               <label>Image Url</label>
+               <input type="text" name="imageUrl" class="form-item" id="editImage">
+               <label>Description</label>
+               <textarea type="text" name="description" class="form-item" id="editDescription"></textarea>
+               <label>Genres</label>
+               <input type="text" class="form-item" name="genres" id="editGenres">
+               <label>Available Tickets</label>
+               <input type="number" class="form-item" name="tickets" id="editTickets">
+               <input type="submit" class="btn" value="Edit">
+            </form>
+         </section>
+
+         <section class="form-section" id="deleteMovie">
+            <h1 class="heading-primary">Delete Movie</h1>
+            <form action="" method="POST" class="form">
+               <label>Title</label>
+               <input type="text" name="title" class="form-item" value="Us (2019)" disabled="">
+               <label>Image Url</label>
+               <input type="text" name="imageUrl" class="form-item"
+                  value=https://m.media-amazon.com/images/M/MV5BZTliNWJhM2YtNDc1MC00YTk1LWE2MGYtZmE4M2Y5ODdlNzQzXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX140_CR0,0,140,209_AL_.jpg"
+                  disabled="">
+               <label>Description</label>
+               <textarea type="text" name="description" class="form-item"
+                  disabled="">A family's serenity turns to chaos when a group of doppelgängers begins to terrorize them.</textarea>
+               <label>Genres</label>
+               <input type="text" class="form-item" name="genres" value="Horror, Triller" disabled="">
+               <label>Available Tickets</label>
+               <input type="number" class="form-item" name="tickets" value="50" disabled="">
+               <input type="submit" class="btn" value="Delete">
+            </form>
+         </section>
+
+
+
       </section>
       <footer>@Movies</footer>
    </div>
