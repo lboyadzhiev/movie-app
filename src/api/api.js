@@ -1,5 +1,5 @@
 export const settings = {
-    host: 'https://parseapi.back4app.com/classes/MyCustomClassName',
+    host: '',
 };
 
 async function request(url, options) {
@@ -62,6 +62,16 @@ export async function del(url) {
     return await request(url, getOptions('delete'));
 }
 
-export async function register(userName, emial, password) {
-    const result = await post(settings.host);
+export async function register(email, username, password) {
+    const result = await post(settings.host + '/users', {
+        email,
+        username,
+        password,
+    });
+
+    sessionStorage.setItem('userName', username);
+    sessionStorage.setItem('authToken', result.sessionToken);
+    sessionStorage.setItem('userId', result.objectId);
+
+    return result;
 }
