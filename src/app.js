@@ -2,15 +2,13 @@ import page from '../node_modules/page/page.mjs';
 import { render } from '../node_modules/lit-html/lit-html.js';
 
 import { homePage } from './views/home.js';
-
-// import * as api from './api/api.js';
-
-// api.settings.host = 'https://parseapi.back4app.com/';
+import { loginPage } from './views/login.js';
 
 const main = document.getElementById('container');
 setUserNav();
 
 page('/', decorateContext, homePage);
+page('/login', decorateContext, loginPage);
 
 page.start();
 
@@ -22,9 +20,10 @@ function decorateContext(ctx, next) {
 }
 
 function setUserNav() {
-    const token = sessionStorage.getItem('authToken');
+    const username = sessionStorage.getItem('userName');
 
-    if (token != null) {
+    if (username != null) {
+        document.getElementById('welcome').textContent = `Welcome, ${username}`;
         document.querySelector('#user').style.display = 'block';
         document.querySelector('#quest').style.display = 'none';
     } else {
