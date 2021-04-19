@@ -17,9 +17,9 @@ async function request(url, options) {
         } catch (err) {
             return response;
         }
-    } catch (errr) {
-        alert(err.message);
-        throw err;
+    } catch (error) {
+        alert(error.message);
+        throw error;
     }
 }
 

@@ -3,12 +3,14 @@ import { render } from '../node_modules/lit-html/lit-html.js';
 
 import { homePage } from './views/home.js';
 import { loginPage } from './views/login.js';
+import { registerPage } from './views/register.js';
 
 const main = document.getElementById('container');
 setUserNav();
 
 page('/', decorateContext, homePage);
 page('/login', decorateContext, loginPage);
+page('/register', decorateContext, registerPage);
 
 page.start();
 
