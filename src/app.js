@@ -1,11 +1,13 @@
 import page from '../node_modules/page/page.mjs';
 import { render } from '../node_modules/lit-html/lit-html.js';
 
+import { logout as apiLogout } from './api/data.js';
 import { homePage } from './views/home.js';
 import { loginPage } from './views/login.js';
 import { registerPage } from './views/register.js';
 
 const main = document.getElementById('container');
+document.getElementById('logoutBtn').addEventListener('click', logout);
 setUserNav();
 
 page('/', decorateContext, homePage);
@@ -32,4 +34,10 @@ function setUserNav() {
         document.querySelector('#user').style.display = 'none';
         document.querySelector('#quest').style.display = 'block';
     }
+}
+
+async function logout() {
+    await apiLogout();
+    setUserNav();
+    page.redirect('/');
 }
