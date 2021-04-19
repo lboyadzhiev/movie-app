@@ -91,6 +91,9 @@ a {
       color: #fff;
       text-decoration: underline; }
 
+.left-side {
+  display: flex; }
+
 .form-item {
   outline: none;
   padding: 0.5rem;

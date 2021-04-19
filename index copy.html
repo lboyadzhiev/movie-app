@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/style.css">
+   <title>movies</title>
+   <script src="./src/app.js" type="module"></script>
+</head>
+
+<body>
+   <div id="container" class="container">
+      <nav class="navbar">
+         <ul class="nav-el">
+
+            <div class="left-side">
+               <li class="nav-el__item"><a href="#" class="nav-el__link">Home</a></li>
+               <li class="nav-el__item userIn"><a href="#" class="nav-el__link">Cinema</a></li>
+               <li class="nav-el__item"><a href="#" class="nav-el__link">Add Movie</a></li>
+               <li class="nav-el__item"><a href="#" class="nav-el__link">My Movies</a></li>
+            </div>
+
+            <div class="right-side">
+               <li class="nav-el__item"><a href="#" class="nav-el__link">Login</a></li>
+               <li class="nav-el__item">Welcome, user!</li>
+               <li class="nav-el__item"><a href="#" class="nav-el__link">Registration</a></li>
+               <li class="nav-el__item"><a href="#" class="nav-el__link">Logout</a></li>
+
+            </div>
+         </ul>
+      </nav>
+
+
+      <!-- register form -->
+
+      <section class="form-section" id="registerForm">
+         <h1 class="heading-primary">Register</h1>
+         <form action="" method="POST" class="form">
+
+            <label>Username</label>
+            <input type="text" name="username" class="form-item" id="registerUsername">
+            <label>Password</label>
+            <input type="password" name="password" class="form-item" id="registerPassword">
+            <label>Repeat Password</label>
+            <input type="password" name="repeatPassword" class="form-item" id="registerRepeatPassword">
+            <input type="submit" class="btn" value="Register">
+         </form>
+      </section>
+
+      <section class="form-section" id="loginForm">
+         <h1 class="heading-primary">Login</h1>
+         <form action="" method="POST" class="form">
+
+            <label>Username</label>
+            <input type="text" name="username" class="form-item" id="loginUsername">
+            <label>Password</label>
+            <input type="password" name="password" class="form-item" id="loginPassword">
+            <input type="submit" class="btn" value="Login">
+         </form>
+      </section>
+
+      <section class="form-section" id="addMovie">
+         <h1 class="heading-primary">Create Movie</h1>
+         <form action="" method="POST" class="form">
+            <label>Title</label>
+            <input type="text" name="title" class="form-item" id="createTitle">
+            <label>Image Url</label>
+            <input type="text" name="imageUrl" class="form-item" id="createImage">
+            <label>Description</label>
+            <textarea type="text" name="description" class="form-item" id="createDescription"></textarea>
+            <label>Genres</label>
+            <input type="text" class="form-item" name="genres" id="createGenres">
+            <label>Available Tickets</label>
+            <input type="number" class="form-item" name="tickets" id="createTickets">
+            <input type="submit" class="btn" value="Create">
+         </form>
+      </section>
+
+      <section class="myMovies-section" id="myMovies">
+         <h1 class="heading-primary">My Movies</h1>
+
+         <div class="movies">
+            <div class="movies__movie">
+               <h2 class="heading-secondary">Title: Us (2019)</h2>
+               <img
+                  src=https://m.media-amazon.com/images/M/MV5BZTliNWJhM2YtNDc1MC00YTk1LWE2MGYtZmE4M2Y5ODdlNzQzXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX140_CR0,0,140,209_AL_.jpg
+                  alt="movie img" class="movies__img">
+               <p class="movies__tickets">Available Tickets: 50</p>
+
+               <div class="movies__btn-group">
+                  <button class="movies__btn btn"><a href="#">Edit</a></button>
+                  <button class="movies__btn btn"><a href="#">Delete</a></button>
+                  <button class="movies__btn btn"><a href="#">Buy Ticket</a></button>
+                  <button class="movies__btn btn"><a href="#">Details</a></button>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="allMovies" id="cinema">
+         <h1 class="heading-primary">All Movies</h1>
+         <form action="" class="form search-form" method="GET">
+            <label>Search movie:</label>
+            <input type="text" class="form-item" name="search">
+            <input type="submit" class="btn" value="search">
+         </form>
+
+         <div class="movies">
+            <div class="movies__movie">
+               <h2 class="heading-secondary">Title: Us (2019)</h2>
+               <img
+                  src=https://m.media-amazon.com/images/M/MV5BZTliNWJhM2YtNDc1MC00YTk1LWE2MGYtZmE4M2Y5ODdlNzQzXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX140_CR0,0,140,209_AL_.jpg
+                  alt="movie img" class="movies__img">
+               <p class="movies__tickets">Available Tickets: 50</p>
+
+               <div class="movies__btn-group">
+                  <button class="movies__btn btn"><a href="#">Buy Ticket</a></button>
+                  <button class="movies__btn btn"><a href="#">Details</a></button>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="form-section" id="editMovie">
+         <h1 class="heading-primary">Edit Movie</h1>
+         <form action="" method="POST" class="form">
+            <label>Title</label>
+            <input type="text" name="title" class="form-item" id="editTitle">
+            <label>Image Url</label>
+            <input type="text" name="imageUrl" class="form-item" id="editImage">
+            <label>Description</label>
+            <textarea type="text" name="description" class="form-item" id="editDescription"></textarea>
+            <label>Genres</label>
+            <input type="text" class="form-item" name="genres" id="editGenres">
+            <label>Available Tickets</label>
+            <input type="number" class="form-item" name="tickets" id="editTickets">
+            <input type="submit" class="btn" value="Edit">
+         </form>
+      </section>
+
+      <section class="form-section" id="deleteMovie">
+         <h1 class="heading-primary">Delete Movie</h1>
+         <form action="" method="POST" class="form">
+            <label>Title</label>
+            <input type="text" name="title" class="form-item" value="Us (2019)" disabled="">
+            <label>Image Url</label>
+            <input type="text" name="imageUrl" class="form-item"
+               value=https://m.media-amazon.com/images/M/MV5BZTliNWJhM2YtNDc1MC00YTk1LWE2MGYtZmE4M2Y5ODdlNzQzXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX140_CR0,0,140,209_AL_.jpg"
+               disabled="">
+            <label>Description</label>
+            <textarea type="text" name="description" class="form-item"
+               disabled="">A family's serenity turns to chaos when a group of doppelgängers begins to terrorize them.</textarea>
+            <label>Genres</label>
+            <input type="text" class="form-item" name="genres" value="Horror, Triller" disabled="">
+            <label>Available Tickets</label>
+            <input type="number" class="form-item" name="tickets" value="50" disabled="">
+            <input type="submit" class="btn" value="Delete">
+         </form>
+      </section>
+
+      <section class="myMovies-section" id="detailsMovie">
+         <h1 class="heading-primary">Details</h1>
+
+         <div class="movies">
+            <div class="movies__movie">
+               <h2 class="heading-secondary">Title: Us (2019)</h2>
+               <img
+                  src=https://m.media-amazon.com/images/M/MV5BZTliNWJhM2YtNDc1MC00YTk1LWE2MGYtZmE4M2Y5ODdlNzQzXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX140_CR0,0,140,209_AL_.jpg
+                  alt="movie img" class="movies__img">
+               <p class="movies__tickets">
+                  A family's serenity turns to chaos when a group of doppelgängers begins to terrorize them.
+               </p>
+               <h2 class="heading-secondary">Genres</h2>
+               <ul class="movies__tickets">
+                  <li>Horror, Triller</li>
+               </ul>
+               <p class="movies__tickets">Available Tickets: 50</p>
+
+               < <button class="movies__btn btn"><a href="#">Buy ticket</a></button>
+            </div>
+         </div>
+      </section>
+   </div>
+
+   <footer>@Movies</footer>
+</body>
+
+</html>
