@@ -1,12 +1,15 @@
 import page from '../node_modules/page/page.mjs';
 import { render } from '../node_modules/lit-html/lit-html.js';
 
+import * as api from './api/data.js';
+
 import { logout as apiLogout } from './api/data.js';
 import { homePage } from './views/home.js';
 import { loginPage } from './views/login.js';
 import { registerPage } from './views/register.js';
 import { catalogPage } from './views/catalog.js';
 import { myPage } from './views/myCatalog.js';
+import { createPage } from './views/createMovie.js';
 
 const main = document.getElementById('container');
 document.getElementById('logoutBtn').addEventListener('click', logout);
@@ -17,6 +20,7 @@ page('/login', decorateContext, loginPage);
 page('/register', decorateContext, registerPage);
 page('/catalog', decorateContext, catalogPage);
 page('/myCatalog', decorateContext, myPage);
+page('/create', decorateContext, createPage);
 
 page.start();
 
