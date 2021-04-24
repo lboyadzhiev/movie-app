@@ -22,9 +22,6 @@ const myTemplate = () => html`
                     <button class="movies__btn btn">
                         <a href="#">Buy Ticket</a>
                     </button>
-                    <button class="movies__btn btn">
-                        <a href="#">Details</a>
-                    </button>
                 </div>
             </div>
         </div>

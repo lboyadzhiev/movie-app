@@ -5,5 +5,10 @@ const homeTemplate = () => html`
 `;
 
 export async function homePage(ctx) {
+    const token = sessionStorage.getItem('authToken');
+
+    if (token != null) {
+        return ctx.page.redirect('/myCatalog');
+    }
     ctx.render(homeTemplate());
 }
