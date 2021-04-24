@@ -38,6 +38,6 @@ export async function loginPage(ctx) {
         await login(userName, password);
 
         ctx.setUserNav();
-        ctx.page.redirect('/catalog');
+        ctx.page.redirect('/');
     }
 }
