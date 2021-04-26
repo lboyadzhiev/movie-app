@@ -9,9 +9,8 @@ import { myMoviesPage } from './views/myMovies.js';
 import { editPage } from './views/edit.js';
 import { detailsPage } from './views/details.js';
 
-import * as api from './api/api.js';
+import * as api from './api/data.js';
 
-api.settings.host = 'http://localhost:3030';
 window.api = api;
 
 page('/home', homePage);
