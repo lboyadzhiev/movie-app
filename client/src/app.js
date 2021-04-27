@@ -1,4 +1,5 @@
 import page from '../node_modules/page/page.mjs';
+import { render } from '../node_modules/lit-html/lit-html.js';
 
 import { homePage } from './views/home.js';
 import { registerPage } from './views/register.js';
@@ -13,13 +14,20 @@ import * as api from './api/data.js';
 
 window.api = api;
 
-page('/home', homePage);
-page('/register', registerPage);
-page('/login', loginPage);
-page('/movies', moviesPage);
-page('/create', createPage);
-page('/my-movies', myMoviesPage);
-page('/edit/:id', editPage);
-page('/details/:id', detailsPage);
+const main = document.getElementById('container');
+
+page('/', renderView, homePage);
+page('/register', renderView, registerPage);
+page('/login', renderView, loginPage);
+page('/movies', renderView, moviesPage);
+page('/create', renderView, createPage);
+page('/my-movies', renderView, myMoviesPage);
+page('/edit/:id', renderView, editPage);
+page('/details/:id', renderView, detailsPage);
 
 page.start();
+
+function renderView(ctx, next) {
+    ctx.render = content => render(content, main);
+    next();
+}

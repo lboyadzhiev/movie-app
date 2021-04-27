@@ -3,3 +3,7 @@
 3. Configure routing with placeholder modules
 4. Implement requests
 5. Implement each view
+5.1 Create static templates
+5.2 Implement fetch requests
+5.3 Add parameters to templates
+5.4 Add event listener
