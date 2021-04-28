@@ -24,9 +24,9 @@ export async function registerPage(ctx) {
         event.preventDefault();
 
         const formData = new FormData(event.target);
-        const email = formData.get('email');
-        const password = formData.get('password');
-        const rePass = formData.get('repeatPassword');
+        const email = formData.get('email').trim();
+        const password = formData.get('password').trim();
+        const rePass = formData.get('repeatPassword').trim();
 
         if (email == '' || password == '' || rePass == '') {
             return ctx.render(
