@@ -70,7 +70,6 @@ a {
     background-color: var(--color-primary-dark);
     color: var(--color-white);
     font-weight: bold;
-    width: 40%;
     font-size: 1rem;
     margin: 0 auto;
     padding: 0.8rem;
@@ -96,13 +95,17 @@ a {
         width: 30%;
     }
 
+    &__movie img {
+        margin: 1rem 0;
+    }
+
     &__img {
         height: 14rem;
         width: 10rem;
         margin: 1rem 0;
     }
 
-    &__tickets {
+    &__description {
         color: var(--color-white);
         font-size: 1.2rem;
     }
@@ -115,6 +118,10 @@ a {
     &__btn {
         margin: 1rem auto 12% auto;
     }
+
+    &__btn a {
+        padding: 2rem;
+    }
 }
 
 .errMsg {
@@ -124,4 +131,8 @@ a {
     color: var(--color-white);
     background-color: red;
     margin-top: 0.5rem;
+}
+
+ul {
+    list-style: none;
 }

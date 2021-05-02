@@ -107,7 +107,6 @@ a {
   background-color: var(--color-primary-dark);
   color: var(--color-white);
   font-weight: bold;
-  width: 40%;
   font-size: 1rem;
   margin: 0 auto;
   padding: 0.8rem; }
@@ -127,11 +126,13 @@ a {
     margin: 0 auto;
     text-align: center;
     width: 30%; }
+  .movies__movie img {
+    margin: 1rem 0; }
   .movies__img {
     height: 14rem;
     width: 10rem;
     margin: 1rem 0; }
-  .movies__tickets {
+  .movies__description {
     color: var(--color-white);
     font-size: 1.2rem; }
   .movies__btn-group {
@@ -140,6 +141,8 @@ a {
     margin: 0 auto; }
   .movies__btn {
     margin: 1rem auto 12% auto; }
+  .movies__btn a {
+    padding: 2rem; }
 
 .errMsg {
   font-size: 1.5rem;
@@ -148,3 +151,6 @@ a {
   color: var(--color-white);
   background-color: red;
   margin-top: 0.5rem; }
+
+ul {
+  list-style: none; }
