@@ -37,8 +37,10 @@ export async function detailsPage(ctx) {
     ctx.render(detailTemlate(movie, movie._ownerId == userId, onDelete));
 
     async function onDelete() {
-        const confirm = config('Are you sure you want to delete this movie?');
-        if (confirm) {
+        const confirmed = confirm(
+            'Are you sure you want to delete this movie?'
+        );
+        if (confirmed) {
             await deleteMovie(movie._id);
 
             ctx.page.redirect('/my-movies');
