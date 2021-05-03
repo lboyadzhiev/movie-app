@@ -2,34 +2,38 @@ import { html } from '../../node_modules/lit-html/lit-html.js';
 import { getMovieById, editMovie } from '../api/data.js';
 
 const editTemplate = (movie, onSubmit) => html`
-    <div id="editMovie">
-        <h1>Edit movie</h1>
-        <form @submit=${onSubmit}>
+    <section class="form-section">
+        <h1 class="heading-primary">Edit movie</h1>
+        <form @submit=${onSubmit} class="form">
             <label>Title</label>
-            <input type="text" name="title" value="Us (2019)" id="editTitle" />
+            <input
+                class="form-item"
+                type="text"
+                name="title"
+                value=${movie.title}
+            />
             <label>Image Url</label>
             <input
+                class="form-item"
                 type="text"
                 name="imageUrl"
-                id="editImage"
-                value="https://m.media-amazon.com/images/M/MV5BZTliNWJhM2YtNDc1MC00YTk1LWE2MGYtZmE4M2Y5ODdlNzQzXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_UX140_CR0,0,140,209_AL_.jpg"
+                value=${movie.img}
             />
             <label>Description</label>
-            <textarea type="text" id="editDescription" name="description">
-A family's serenity turns to chaos when a group of doppelgängers begins to terrorize them.</textarea
+            <textarea class="form-item" type="text" name="description">
+            ${movie.description}
+            </textarea
             >
             <label>Genres</label>
             <input
+                class="form-item"
                 type="text"
                 name="genres"
-                value="Horror,Triller"
-                id="editGenres"
+                value=${movie.genres}
             />
-            <label>Available Tickets</label>
-            <input type="number" name="tickets" value="50" id="editTickets" />
-            <input type="submit" value="Edit" />
+            <input class="btn" type="submit" value="Edit" />
         </form>
-    </div>
+    </section>
 `;
 export async function editPage(ctx) {
     const id = ctx.params.id;
@@ -41,5 +45,14 @@ export async function editPage(ctx) {
         event.preventDefault();
 
         const formData = new FormData(event.target);
+
+        const title = formData.get('title');
+        const img = formData.get('imageUrl');
+        const desc = formData.get('description');
+        const genre = formData.get('genres');
+
+        await editMovie(movie._id, { title, img, desc, genre });
+
+        ctx.page.redirect('/my-movies');
     }
 }
