@@ -1277,6 +1277,7 @@
                 title: 'Wonder Woman 1984',
                 description:
                     'Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient artifact that grants wishes goes missing.',
+                genres: 'comedy',
                 img: 'https://pbs.twimg.com/media/ETINgKwWAAAyA4r.jpg',
                 _createdOn: 1614935181470,
                 _id: '143e5265-333e-4150-80e4-16b61de31aa0',
@@ -1286,6 +1287,7 @@
                 title: 'Top Gun 2',
                 description:
                     "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
+                genres: 'action',
                 img:
                     'https://i.pinimg.com/originals/f2/a4/58/f2a458048757bc6914d559c9e4dc962a.jpg',
                 _createdOn: 1614935268135,
