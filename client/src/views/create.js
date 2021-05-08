@@ -1,7 +1,7 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
 import { createMovie } from '../api/data.js';
 
-const createTemplate = onSubmit => html`
+const createTemplate = (onSubmit, errMsg) => html`
     <section class="form-section">
         <h1 class="heading-primary">Create movie</h1>
         <form @submit=${onSubmit} class="form">
@@ -18,6 +18,7 @@ const createTemplate = onSubmit => html`
             <label>Genres</label>
             <input class="form-item" type="text" name="genres" />
             <input class="btn" type="submit" value="Create" />
+            ${errMsg ? html`<p class="errMsg">${errMsg}</p>` : ''}
         </form>
     </section>
 `;
@@ -35,7 +36,9 @@ export async function createPage(ctx) {
         const genre = formData.get('genres');
 
         if (title == '' || img == '' || desc == '' || genre == '') {
-            return ctx.render(onSubmit, 'All fields are required!!!');
+            return ctx.render(
+                createTemplate(onSubmit, 'All fields are required!!!')
+            );
         }
 
         await createMovie({ title, img, desc, genre });

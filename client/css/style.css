@@ -120,12 +120,12 @@ a {
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
-  width: 100%; }
+  flex-basis: 100%; }
   .movies__movie {
     display: block;
     margin: 0 auto;
     text-align: center;
-    width: 30%; }
+    flex-basis: 30%; }
   .movies__movie img {
     margin: 1rem 0; }
   .movies__img {
@@ -137,8 +137,9 @@ a {
     font-size: 1.2rem; }
   .movies__btn-group {
     display: flex;
-    width: 60%;
-    margin: 0 auto; }
+    width: 30%;
+    margin: 0 auto;
+    justify-content: center; }
   .movies__btn {
     margin: 1rem auto 12% auto; }
   .movies__btn a {
